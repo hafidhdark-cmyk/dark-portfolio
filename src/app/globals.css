@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #0F0F0F;
+  --bg2: #161616;
+  --bg3: #1E1E1E;
+  --text: #F0EDE8;
+  --muted: #7A7570;
+  --accent: #4A7CF5;
+  --warm: #C4B49A;
+  --font-display: 'Instrument Serif', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
