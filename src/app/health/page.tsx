@@ -1,20 +1,20 @@
 async function getHealth() {
   try {
-    const res = await fetch('https://restcountries.com/v3.1/name/nigeria', {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/1', {
       cache: 'no-store'
     })
     if (!res.ok) throw new Error(`API error: ${res.status}`)
     const data = await res.json()
-    return data[0]
+    return data
   } catch (error) {
     return null
   }
 }
 
 export default async function HealthCheck() {
-  const country = await getHealth()
+  const user = await getHealth()
 
-  if (!country) {
+  if (!user) {
     return (
       <main style={{ padding: '40px' }}>
         <h1 style={{ fontFamily: 'var(--font-display)', color: 'var(--text)', marginBottom: '24px' }}>
@@ -30,13 +30,14 @@ export default async function HealthCheck() {
       <h1 style={{ fontFamily: 'var(--font-display)', color: 'var(--text)', marginBottom: '24px' }}>
         Health Check ✓
       </h1>
-      <p style={{ color: 'var(--muted)', marginBottom: '8px' }}>Data fetched from REST Countries API</p>
+      <p style={{ color: 'var(--muted)', marginBottom: '8px' }}>
+        Data fetched from JSONPlaceholder API
+      </p>
       <div style={{ color: 'var(--text)', lineHeight: '2' }}>
-        <p>Country: {country.name.common}</p>
-        <p>Capital: {country.capital[0]}</p>
-        <p>Region: {country.region}</p>
-        <p>Population: {country.population.toLocaleString()}</p>
-        <p>Flag: {country.flag}</p>
+        <p>Name: {user.name}</p>
+        <p>Email: {user.email}</p>
+        <p>Company: {user.company.name}</p>
+        <p>City: {user.address.city}</p>
       </div>
     </main>
   )
