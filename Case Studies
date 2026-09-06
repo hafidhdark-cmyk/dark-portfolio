@@ -1,0 +1,15 @@
+CASE STUDY 1 — FlowState Zen
+Problem: I couldn't focus while coding. I built the tool I needed.
+What I did: Built a Web Audio API synthesizer + Pomodoro timer in React 18, deliberately choosing React while still learning it. Designed the audio engine from scratch — 6 binaural and ambient soundscapes including 40Hz Gamma and Deep Brown Noise.
+What came of it: I use it every day. Brown Noise is the one I keep coming back to. Building for yourself holds you to a different standard.
+Stack: React 18, Web Audio API, Vite, Vanilla CSS, Netlify CI/CD
+Live: flowstate-zen.netlify.app
+GitHub: github.com/hafidhdark-cmyk/FlowState-Zen
+
+CASE STUDY 2 — Tobams Group
+Problem: Pixel-perfect Figma-to-code build. 72-hour deadline. Never used Tailwind before.
+What I did: Didn't touch it day one. Sprinted the last 24 hours, learned Tailwind in real time, deployed to Netlify. Submission form had closed — cold-emailed HR directly anyway.
+What came of it: Didn't get the role. Have used Tailwind on every project since. Some constraints are gifts.
+Stack: Next.js 15, Tailwind CSS v4, Netlify
+Live: darktobams.netlify.app
+GitHub: github.com/hafidhdark-cmyk/Tobams
