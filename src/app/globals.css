@@ -25,7 +25,9 @@ body {
   line-height: 1.7;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 400;
 }
