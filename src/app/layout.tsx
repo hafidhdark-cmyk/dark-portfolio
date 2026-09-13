@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next'
+import Script from 'next/script'
+import FlyRankBadge from '@/components/FlyRankBadge'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: "Abdulmu'meen Adeyeri — Frontend Engineer",
@@ -26,6 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f5eff9d1-163b-48f2-bd36-6e2a987ff4c9"
+          strategy="afterInteractive"
+          defer
+        />
         <header>
           <nav>
             <a href="/">Home</a>
@@ -35,6 +43,9 @@ export default function RootLayout({
           </nav>
         </header>
         <main>{children}</main>
+        <footer style={{ padding: '24px 48px', borderTop: '1px solid #2A2A2A', marginTop: '80px', textAlign: 'center' }}>
+          <FlyRankBadge />
+        </footer>
       </body>
     </html>
   )
